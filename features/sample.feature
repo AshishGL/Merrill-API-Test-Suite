@@ -7,7 +7,7 @@ Feature: Login Process on Stage Server
       | Accept | application/json |
     When I send a POST request to "https://stage-web.core.merrillcorp.com/start"
     Then the response status should be "200"
-    And I grab "$..resumePath" as "resumeCode"
+  #  And I grab "$..resumePath" as "resumeCode"
   
 
   @validate
