@@ -28,22 +28,4 @@ Feature: Login Process on Stage Server
     And I grab "$..jwt" as "token"
     And I grab "$..userId" as "userId"
     
-    Scenario: Login Process- Complete
     
-    Given I send and accept JSON
-    
-    When   I set JSON request body to:
-    """
-    {
-    "userId"="{userId}",
-    "subject"="ashish.sharma6@globallogic.com",
-    "resumeCode"="",
-    "jwt"="{token}"
-
-    }
-    """
-    And I send a POST request to "https://stage-web.core.merrillcorp.com/auth/complete"
-    Then the response status should be "200"
-    
-
-
